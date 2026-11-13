@@ -1038,28 +1038,62 @@ body { background: linear-gradient(180deg, #7fc3f4 0%, #cfe8ff 50%, #f4faff 100%
 @keyframes heatblink{50%{opacity:.45}}
 @media (prefers-reduced-motion: reduce){.fill.heat.cut{animation:none}}
 </style>
+<section id="adsterra-banner" aria-label="Adsterra banner" style="max-width:900px;margin:24px auto;text-align:center;">
+  <a href="" rel="nofollow"><img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/png/80%20x%2030%20px.png" /></a>
+</section>
 
 
-<style>
-#mpBtn{position:fixed;top:calc(env(safe-area-inset-top,0px) + 6px);right:6px;z-index:9999;font:700 12px -apple-system,BlinkMacSystemFont,sans-serif;padding:7px 11px;border:2px solid #fff;border-radius:999px;background:#12c4ee;color:#00303a;box-shadow:0 2px 8px rgba(0,0,0,.3);cursor:pointer}
-#mpBox{position:fixed;top:calc(env(safe-area-inset-top,0px) + 42px);right:6px;z-index:9999;width:min(260px,calc(100vw - 12px));box-sizing:border-box;padding:10px;border-radius:14px;background:rgba(255,255,255,.96);color:#000;font:13px -apple-system,BlinkMacSystemFont,sans-serif;box-shadow:0 6px 24px rgba(0,0,0,.35)}
-#mpBox[hidden]{display:none}
-#mpBox input{box-sizing:border-box;width:100%;margin:0 0 6px;padding:7px 9px;border:2px solid #b9c6d6;border-radius:10px;font:600 14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}
-#mpBox button{width:100%;padding:8px;border:0;border-radius:10px;background:#ff9f1a;color:#000;font:700 14px -apple-system,BlinkMacSystemFont,sans-serif;cursor:pointer}
-#mpSt{margin:6px 0;font-size:12px;color:#444}
-#mpList{list-style:none;margin:6px 0 0;padding:0;max-height:180px;overflow-y:auto}
-#mpList li{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-top:1px solid #e3e9f0}
-#mpList li.me{font-weight:700}
-#mpList i{display:inline-block;width:8px;height:8px;margin-right:6px;border-radius:50%;background:#bbb}
-#mpList i.run{background:#2bb673}
+
+<style id="sky-crawler-fullscreen-fix">
+/* Full-screen game mode */
+.wrap:fullscreen, .wrap:-webkit-full-screen {
+  width:100vw !important; height:100vh !important; height:100dvh !important;
+  max-width:none !important; margin:0 !important; padding:12px !important;
+  box-sizing:border-box !important; background:var(--bg, #17102a) !important;
+  display:flex !important; flex-direction:column !important; justify-content:center !important;
+  overflow:auto !important;
+}
+.wrap:fullscreen .stage, .wrap:-webkit-full-screen .stage {
+  flex:1 1 auto !important; min-height:0 !important; width:100% !important;
+  max-height:calc(100dvh - 150px) !important; aspect-ratio:16 / 9;
+}
+.wrap:fullscreen canvas, .wrap:-webkit-full-screen canvas {
+  width:100% !important; height:100% !important;
+}
+.wrap:fullscreen .fsbtn, .wrap:-webkit-full-screen .fsbtn {
+  left:auto !important; right:10px !important; top:10px !important; transform:none !important;
+}
+@media (orientation:landscape) {
+ .wrap:fullscreen .stage, .wrap:-webkit-full-screen .stage { max-height:calc(100dvh - 95px) !important; }
+}
 </style>
-<button id="mpBtn" type="button">Race friends</button>
-<div id="mpBox" hidden>
-  <input id="mpName" maxlength="16" placeholder="Your name" autocomplete="off">
-  <input id="mpRoom" maxlength="20" placeholder="Room name (e.g. garage1)" autocomplete="off">
-  <button id="mpGo" type="button">Join online</button>
-  <div id="mpSt">Not connected.</div>
-  <ul id="mpList"></ul>
-</div>
-<script type="text/game" data-enc="bc543b000f8f232053cb87a992f22994">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</script>
+<script id="sky-crawler-fullscreen-handler">
+(() => {
+  const button = document.getElementById('fsBtn');
+  const target = document.querySelector('.wrap');
+  if (!button || !target) return;
+  const isFullscreen = () => document.fullscreenElement === target || document.webkitFullscreenElement === target;
+  const update = () => {
+    const active = isFullscreen();
+    button.title = active ? 'Exit full screen' : 'Full screen';
+    button.setAttribute('aria-label', button.title);
+  };
+  button.addEventListener('click', async () => {
+    try {
+      if (isFullscreen()) {
+        if (document.exitFullscreen) await document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      } else {
+        if (target.requestFullscreen) await target.requestFullscreen();
+        else if (target.webkitRequestFullscreen) target.webkitRequestFullscreen();
+      }
+    } catch (error) { console.warn('Fullscreen mode was not available:', error); }
+    update();
+  });
+  document.addEventListener('fullscreenchange', update);
+  document.addEventListener('webkitfullscreenchange', update);
+  update();
+})();
+</script>
+
 </body></html>
